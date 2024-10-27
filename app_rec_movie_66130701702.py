@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-import surprise import SVD
+from surprise import SVD
 
 
 # Load the SVD model, movie ratings, and movies data
