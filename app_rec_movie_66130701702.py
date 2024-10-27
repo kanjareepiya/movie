@@ -1,5 +1,5 @@
-import streamlit as st
 import pickle
+import streamlit as st
 from surprise import SVD
 
 
@@ -30,4 +30,6 @@ if st.button("Get Recommendations"):
     
     # Display recommendations
     st.subheader(f"Top 10 Movie Recommendations for User {user_id}")
-    for recommenda
+    for recommendation in top_recommendations:
+        movie_title = movies[movies['movieId'] == recommendation.iid]['title'].values[0]
+        st.write(f"{movie_title} (Estimated Rating: {recommendation.est:.2f})")
