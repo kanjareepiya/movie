@@ -1,5 +1,6 @@
 import streamlit as st
 import pickle
+import surprise import SVD
  
 # Load the pre-trained SVD model, movie ratings, and movies data
 with open('recommendation_movie_svd.pkl', 'rb') as file:
